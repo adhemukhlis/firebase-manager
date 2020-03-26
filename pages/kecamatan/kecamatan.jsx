@@ -9,7 +9,6 @@ class PageKecamatan extends Component {
 
   componentDidMount() {
     const { match } = this.props;
-    console.log(match.params.id_provinsi + "/" + match.params.id_kab_kot);
     rootRef
       .child("kab-kot")
       .child(match.params.id_kab_kot)
@@ -68,7 +67,7 @@ class PageKecamatan extends Component {
                   <td>
                     <Link
                       to={
-                        "/" +
+                        "/data/" +
                         match.params.id_provinsi +
                         "/" +
                         match.params.id_kab_kot +

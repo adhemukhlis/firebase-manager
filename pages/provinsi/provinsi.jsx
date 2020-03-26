@@ -5,7 +5,6 @@ class PageProvinsi extends Component {
   state = {
     provinsi: []
   };
-
   componentDidMount() {
     rootRef.child("provinsi").once("value", data => {
       let arr = [];
@@ -15,6 +14,13 @@ class PageProvinsi extends Component {
       this.setState({ provinsi: arr });
     });
   }
+  // customRun=()=>{
+  //   rootRef.child("kelurahan").child("3302710002").set({
+  //     "id":"3302710002",
+  //       "id_kecamatan":"3302710",
+  //       "name":"TELUK"
+  //   })
+  // }
   render() {
     const { provinsi } = this.state;
     return (
@@ -46,13 +52,14 @@ class PageProvinsi extends Component {
                 <tr key={"provinsi-" + data.id}>
                   <td>{data.id}</td>
                   <td>
-                    <Link to={"/" + data.id}>{data.name}</Link>
+                    <Link to={"/data/" + data.id}>{data.name}</Link>
                   </td>
                 </tr>
               );
             })}
           </tbody>
         </table>
+        {/*<button width="100%" onClick={this.customRun}>custom run</button>*/}
       </div>
     );
   }

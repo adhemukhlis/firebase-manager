@@ -65,7 +65,7 @@ class PageKabKot extends Component {
                 <tr key={"kab-kot-" + data.id}>
                   <td>{data.id}</td>
                   <td>
-                    <Link to={"/" + match.params.id_provinsi + "/" + data.id}>
+                    <Link to={"/data/" + match.params.id_provinsi + "/" + data.id}>
                       {data.name}
                     </Link>
                   </td>

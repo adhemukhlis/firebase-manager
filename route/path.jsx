@@ -1,6 +1,7 @@
 export const PATH_DIR = {
-  provinsi: "/",
-  kab_kot: "/:id_provinsi",
-  kecamatan: "/:id_provinsi/:id_kab_kot",
-  kelurahan: "/:id_provinsi/:id_kab_kot/:id_kecamatan"
+  provinsi: "/data",
+  kab_kot: "/data/:id_provinsi",
+  kecamatan: "/data/:id_provinsi/:id_kab_kot",
+  kelurahan: "/data/:id_provinsi/:id_kab_kot/:id_kecamatan",
+  edit:"/manage"
 };
